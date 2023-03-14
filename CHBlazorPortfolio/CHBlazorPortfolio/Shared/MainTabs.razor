@@ -1,0 +1,45 @@
+﻿
+<Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged">
+    <Items>
+        <Column ColumnSize="ColumnSize.Is1">
+            <Tab Name="home" TextAlignment="TextAlignment.Center">Home</Tab>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is1">
+            <Tab Name="projects" TextAlignment="TextAlignment.Center">Projects</Tab>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is1">
+            <Tab Name="art" TextAlignment="TextAlignment.Center">Comics & Art</Tab>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is1">
+            <Tab Name="contact" TextAlignment="TextAlignment.Center">Contact</Tab>
+        </Column>
+    </Items>
+    <Content>
+        <TabPanel Name="home">
+            Content for home.
+        </TabPanel>
+        <TabPanel Name="projects">
+            Content for profile.
+        </TabPanel>
+        <TabPanel Name="art">
+            <Paragraph />
+            <ArtTabs />
+        </TabPanel>
+        <TabPanel Name="contact">
+            Content for Contact.
+        </TabPanel>
+    </Content>
+</Tabs>
+
+
+
+@code {
+    string selectedTab = "profile";
+
+    private Task OnSelectedTabChanged(string name)
+    {
+        selectedTab = name;
+
+        return Task.CompletedTask;
+    }
+}

@@ -1,0 +1,44 @@
+﻿@page "/ComicPage"
+
+
+<Layout>
+    <LayoutHeader>
+        <Container TextAlignment="TextAlignment.Center">
+            <h3>The Quest For Jonuts</h3>
+            <Paragraph>
+                Page 0 : Practice
+            </Paragraph>
+        </Container>
+    </LayoutHeader>
+
+
+    <LayoutContent>
+        <Container TextAlignment="TextAlignment.Center">
+            <Figure Size="FigureSize.Is256x256">
+                <FigureImage Source="icon-192.png" AlternateText="empty-256x256" />
+                <!--FigureCaption>A caption for the above image.</!--FigureCaption-->
+            </Figure>
+        </Container>
+        
+
+        <Divider DividerType="DividerType.Dotted" />
+        
+        <Paragraph>
+            The Quest for Jonuts rides on!
+        </Paragraph>
+
+        <Divider DividerType="DividerType.Dashed" />
+
+        <Field Flex="Flex.JustifyContent.Between">
+            <Button Color="Color.Secondary">Previous Page</Button>
+            <Div>
+                <Button Color="Color.Primary">Next Page</Button>
+            </Div>
+        </Field>
+    </LayoutContent>
+</Layout>
+
+
+@code {
+
+}

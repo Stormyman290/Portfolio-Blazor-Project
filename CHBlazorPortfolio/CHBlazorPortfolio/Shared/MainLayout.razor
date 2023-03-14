@@ -1,17 +1,39 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        <Container TextAlignment="TextAlignment.Center">
+            <h3>Christopher Hahn</h3>
+            <h6>Comic Project</h6>
+        </Container>
+
+        <div class="tabs">
+            <MainTabs />
         </div>
+
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
 
         <article class="content px-4">
             @Body
         </article>
     </main>
+
 </div>
+
+
+
+@code {
+    string selectedTab = "profile";
+
+    private Task OnSelectedTabChanged(string name)
+    {
+        selectedTab = name;
+
+        return Task.CompletedTask;
+    }
+}

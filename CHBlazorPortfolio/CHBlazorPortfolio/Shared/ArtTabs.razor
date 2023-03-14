@@ -1,0 +1,27 @@
+﻿<Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged" Gap="Gap.Is3">
+    <Items>
+        <Paragraph/>
+        <Tab Name="jonuts" TextAlignment="TextAlignment.Center">The Quest For Jonuts</Tab>
+        <Tab Name="dragons" TextAlignment="TextAlignment.Center">Dragons</Tab>
+        <Paragraph/>
+    </Items>
+    <Content>
+        <TabPanel Name="jonuts">
+            Content for home.
+        </TabPanel>
+        <TabPanel Name="dragons">
+            Content for profile.
+        </TabPanel>
+    </Content>
+</Tabs>
+
+@code {
+    string selectedTab = "profile";
+
+    private Task OnSelectedTabChanged(string name)
+    {
+        selectedTab = name;
+
+        return Task.CompletedTask;
+    }
+}
