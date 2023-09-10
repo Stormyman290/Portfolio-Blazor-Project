@@ -1,0 +1,87 @@
+﻿<Layout>
+    <LayoutHeader Fixed>
+        <h3>PageList</h3>
+    </LayoutHeader>
+    <Layout Sider>
+        <LayoutSider>
+            <LayoutSiderContent>
+                <!-- TODO TODO TODO PUT IN SOME KIND OF SCROLLABLE LIST-->
+                <!-- Should be able to look up this problem for plain HTML-->
+                <UnorderedList>
+                    @for (int p = 0; p < ComicPages.Count; p++)
+                    {
+                        int pageNum = p;
+                        <UnorderedListItem>
+                            <Row Margin="Margin.Is2">
+                                <Button Background="IsPageSelected(pageNum)" @onclick="() => JumpToPage(pageNum)">
+                                    <Container Padding="Padding.Is2">
+                                        <Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text"></Image> @*Replace URL with imageURL*@
+                                        <Text TextColor="TextColor.White">@ComicPages[pageNum].comicTitle</Text>
+                                        <Text TextColor="TextColor.White">@pageNum</Text>
+                                    </Container>
+                                </Button>
+                            </Row>
+                        </UnorderedListItem>
+                    }
+                </UnorderedList>
+            </LayoutSiderContent>
+        </LayoutSider>
+        <Layout>
+            <LayoutContent>
+
+                <!--Content-->
+                <Container Width="Width.Is50" Background="Background.Warning">
+                    <Heading Size="HeadingSize.Is3">@ComicPages[focusPageNum].comicTitle</Heading>
+
+                    <Container Background="Background.Danger">
+                        <CardImage Source=@ComicPages[focusPageNum].comicURL[0] Text="Image Test Text"></CardImage>
+                    </Container>
+
+                    <Paragraph>@ComicPages[focusPageNum].commentParagraph</Paragraph>
+
+                    <Container>
+                        <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == 0) @onclick="() => JumpToPage(focusPageNum-1)">Previous</Button>
+                        <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == ComicPages.Count - 1) @onclick="() => JumpToPage(focusPageNum+1)">Next</Button>
+                    </Container>
+                </Container>
+
+            </LayoutContent>
+        </Layout>
+    </Layout>
+</Layout>
+
+
+@code {
+    public List<ComicData> ComicPages;
+    public int focusPageNum = 0;
+
+    public PageList()
+    {
+        ComicPages = new List<ComicData>
+        {
+            new ComicData(),
+            new ComicData("Quest For Jonuts", new string[]{"ComicPages/Q4J Title Pages-2.png"}, "Comment Paragraph"),
+            new ComicData(),
+            new ComicData(),
+            new ComicData(),
+            new ComicData("QQ", new string[]{"favicon.png"}, "QQ")
+        };
+    }
+
+    private void JumpToPage(int pageToGoTo)
+    {
+        if (pageToGoTo < 0 || pageToGoTo >= ComicPages.Count())
+            return;
+
+
+        focusPageNum = pageToGoTo;
+    }
+
+    private Background IsPageSelected(int pageNum)
+    {
+        if (focusPageNum == pageNum)
+            return Background.Primary;
+        else
+            return Background.Secondary;
+    }
+}
