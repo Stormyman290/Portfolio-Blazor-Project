@@ -1,24 +1,30 @@
-﻿namespace CHBlazorPortfolioTake3.Classes
+﻿using System.Text;
+
+namespace CHBlazorPortfolioTake3.Classes
 {
     public class ComicData
     {
-        public string comicTitle = "Default";
-        public string[] comicURL = new string[] { "ComicPages/QuestForJonuts-OriginalRun-01.png" };
-        public string commentParagraph = "Default 2oo";
-
-        //TODO Should I have a connection the next and previouis pages???
+        public string comicTitle = "Comic Title";
+        public string[] authors = { "Christopher Hahn" };
+        public List<ComicPage> comicPages = new List<ComicPage>();
 
 
         public ComicData()
         {
-
+            comicPages.Add(new ComicPage());
         }
 
-        public ComicData(string comicTitle, string[] comicURL, string commentParagraph)
+        public ComicData(string comicDataFileName)
         {
-            this.comicTitle = comicTitle;
-            this.comicURL = comicURL;
-            this.commentParagraph = commentParagraph;
+            string[] lines = File.ReadAllLines(comicDataFileName, Encoding.UTF8);
+
+            comicTitle = lines[0];
+            authors = lines[1].Split(',');
+
+            for (int i = 3; i < lines.Length; i += 5)
+            {
+                comicPages.Add(new ComicPage(lines[i], lines[i + 1].Split(','), int.Parse(lines[i + 2]), lines[i + 3]));
+            }
         }
     }
 }

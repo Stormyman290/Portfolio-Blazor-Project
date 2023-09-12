@@ -16,7 +16,7 @@
                                 <Button Background="IsPageSelected(pageNum)" @onclick="() => JumpToPage(pageNum)">
                                     <Container Padding="Padding.Is2">
                                         <Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text"></Image> @*Replace URL with imageURL*@
-                                        <Text TextColor="TextColor.White">@ComicPages[pageNum].comicTitle</Text>
+                                        <Text TextColor="TextColor.White">@ComicPages[pageNum].title</Text>
                                         <Text TextColor="TextColor.White">@pageNum</Text>
                                     </Container>
                                 </Button>
@@ -31,13 +31,13 @@
 
                 <!--Content-->
                 <Container Width="Width.Is50" Background="Background.Warning">
-                    <Heading Size="HeadingSize.Is3">@ComicPages[focusPageNum].comicTitle</Heading>
+                    <Heading Size="HeadingSize.Is3">@ComicPages[focusPageNum].title</Heading>
 
                     <Container Background="Background.Danger">
-                        <CardImage Source=@ComicPages[focusPageNum].comicURL[0] Text="Image Test Text"></CardImage>
+                        <CardImage Source=@ComicPages[focusPageNum].imageURLs[0] Text="Image Test Text"></CardImage>
                     </Container>
 
-                    <Paragraph>@ComicPages[focusPageNum].commentParagraph</Paragraph>
+                    <Paragraph>@ComicPages[focusPageNum].comment</Paragraph>
 
                     <Container>
                         <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == 0) @onclick="() => JumpToPage(focusPageNum-1)">Previous</Button>
@@ -52,19 +52,19 @@
 
 
 @code {
-    public List<ComicData> ComicPages;
+    public List<ComicPage> ComicPages;
     public int focusPageNum = 0;
 
     public PageList()
     {
-        ComicPages = new List<ComicData>
+        ComicPages = new List<ComicPage>
         {
-            new ComicData(),
-            new ComicData("Quest For Jonuts", new string[]{"ComicPages/Q4J Title Pages-2.png"}, "Comment Paragraph"),
-            new ComicData(),
-            new ComicData(),
-            new ComicData(),
-            new ComicData("QQ", new string[]{"favicon.png"}, "QQ")
+            new ComicPage(),
+            new ComicPage("Quest For Jonuts", new string[]{"ComicPages/Q4J Title Pages-2.png"}, "Comment Paragraph"),
+            new ComicPage(),
+            new ComicPage(),
+            new ComicPage(),
+            new ComicPage("QQ", new string[]{"favicon.png"}, "QQ")
         };
     }
 
