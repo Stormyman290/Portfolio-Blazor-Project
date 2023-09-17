@@ -1,0 +1,68 @@
+﻿{
+  "comicTitle": "The Quest For Jonuts",
+  "authors": [ "Christopher Hahn", "Ethan Stovall" ],
+  "urlPrefix": "ComicPages/",
+  "fileType": ".png",
+  "comicPages": [
+    {
+      "title": "The Quest For Jonuts",
+      "imageURLs": [ "Q4J Title Pages-2" ],
+      "thumbnailIndex": 0,
+      "comment": "A comic created to share with my friends in one of my work groups at Raytheon. Whenever I had some time to spare I would work on the next page to this. The original concept for this was to have a sc-fi adventure about some people looking for some \"artifact.\""
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    },
+    {
+      "title": "TestPage 1",
+      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "thumbnailIndex": 0,
+      "comment": "Blank"
+    }
+  ]
+}

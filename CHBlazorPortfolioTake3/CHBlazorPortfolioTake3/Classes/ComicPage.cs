@@ -2,22 +2,33 @@
 {
     public class ComicPage
     {
-        public string title = "Default";
-        public string[] imageURLs = new string[] { "ComicPages/QuestForJonuts-OriginalRun-01.png" };
-        public int thumbnailIndex = 0;
-        public string comment = "Default 2oo";
+        public string Title { get; set; }
+        public string[] ImageURLs { get; set; }
+        public int ThumbnailIndex { get; set; }
+        public string Comment { get; set; }
 
         public ComicPage()
         {
-
+            Title = "Default";
+            ImageURLs = new string[] { "ComicPages/QuestForJonuts-OriginalRun-01.png" };
+            ThumbnailIndex = 0;
+            Comment = "Default 2oo";
         }
 
         public ComicPage(string comicTitle, string[] comicURL, int thumbnailIndex, string commentParagraph)
         {
-            this.title = comicTitle;
-            this.imageURLs = comicURL;
-            this.thumbnailIndex = thumbnailIndex;
-            this.comment = commentParagraph;
+            this.Title = comicTitle;
+            this.ImageURLs = comicURL;
+            this.ThumbnailIndex = thumbnailIndex;
+            this.Comment = commentParagraph;
+        }
+
+        public string printValues()
+        {
+            return "title: " + Title +
+                "\nimageURLs: " + ImageURLs +
+                "\nthumbnailIndex: " + ThumbnailIndex +
+                "\ncomment: " + Comment;
         }
     }
 }
