@@ -12,7 +12,7 @@ else
         </LayoutHeader>
         <Layout Sider>
             <LayoutSider>
-                <LayoutSiderContent>
+                <LayoutSiderContent Overflow="Overflow.Auto">
                     <!-- TODO TODO TODO PUT IN SOME KIND OF SCROLLABLE LIST-->
                     <!-- Should be able to look up this problem for plain HTML-->
                     <UnorderedList>
@@ -23,10 +23,11 @@ else
                                 <Row Margin="Margin.Is2">
                                     <Button Background="IsPageSelected(pageNum)" @onclick="() => JumpToPage(pageNum)">
                                         <Container Padding="Padding.Is2">
-                                            @*<Image Padding="Padding.Is2" Source=@ComicPages[pageNum].imageURLs[ComicPages[pageNum].thumbnailIndex] Text="Image Test Text"></Image>*@
+                                            @*<Image Padding="Padding.Is2" Source=@ComicPages[pageNum].imageURLs[ComicPages[pageNum].ThumbnailIndex] Text="Image Test Text"></Image>*@
+                                            
                                             <Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text"></Image>
                                             <Text TextColor="TextColor.White">@ComicPages[pageNum].Title</Text>
-                                            <Text TextColor="TextColor.White">@pageNum</Text>
+                                            <Text TextColor="TextColor.White">@(pageNum + 1)</Text>
                                         </Container>
                                     </Button>
                                 </Row>
@@ -36,7 +37,7 @@ else
                 </LayoutSiderContent>
             </LayoutSider>
             <Layout>
-                <LayoutContent>
+                <LayoutContent Overflow="Overflow.Auto">
 
                     <!--Content-->
                     <Container Width="Width.Is50" Background="Background.Warning">
