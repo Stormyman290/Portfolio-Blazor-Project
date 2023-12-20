@@ -13,8 +13,7 @@ else
         <Layout Sider>
             <LayoutSider>
                 <LayoutSiderContent Overflow="Overflow.Auto">
-                    <!-- TODO TODO TODO PUT IN SOME KIND OF SCROLLABLE LIST-->
-                    <!-- Should be able to look up this problem for plain HTML-->
+                    <!-- Scrollabale list of page buttons to get through for the comic -->
                     <UnorderedList>
                         @for (int p = 0; p < ComicPages.Count; p++)
                         {
@@ -22,12 +21,16 @@ else
                             <UnorderedListItem>
                                 <Row Margin="Margin.Is2">
                                     <Button Background="IsPageSelected(pageNum)" @onclick="() => JumpToPage(pageNum)">
-                                        <Container Padding="Padding.Is2">
-                                            @*<Image Padding="Padding.Is2" Source=@ComicPages[pageNum].imageURLs[ComicPages[pageNum].ThumbnailIndex] Text="Image Test Text"></Image>*@
-                                            
-                                            <Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text"></Image>
-                                            <Text TextColor="TextColor.White">@ComicPages[pageNum].Title</Text>
-                                            <Text TextColor="TextColor.White">@(pageNum + 1)</Text>
+                                        <Container Padding="Padding.Is0">
+                                            <Div>
+                                                @*<Image Padding="Padding.Is2" Source=@ComicPages[pageNum].ImageURLs[ComicPages[pageNum].ThumbnailIndex] Text="Image Test Text" Fluid></Image>*@
+                                                @*<Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text" Loading></Image>*@
+                                                <Figure Padding="Padding.Is2" Size="FigureSize.Is128x128" Position="Position.Relative.Start">
+                                                    <FigureImage Source=@ComicPages[pageNum].ImageURLs[ComicPages[pageNum].ThumbnailIndex] AlternateText="Image Test Text" Rounded/>
+                                                </Figure>
+                                                <Text TextColor="TextColor.White">@ComicPages[pageNum].Title</Text>
+                                                <Text TextColor="TextColor.White"> - p@(pageNum + 1)</Text>
+                                            </Div>
                                         </Container>
                                     </Button>
                                 </Row>
@@ -41,14 +44,18 @@ else
 
                     <!--Content-->
                     <Container Width="Width.Is50" Background="Background.Warning">
+                        @*The comic title*@
                         <Heading Size="HeadingSize.Is3">@ComicPages[focusPageNum].Title</Heading>
 
+                        @*The comic images*@
                         <Container Background="Background.Danger">
                             <CardImage Source=@ComicPages[focusPageNum].ImageURLs[0] Text="Image Test Text"></CardImage>
                         </Container>
 
+                        @*The comic paragraph comment*@
                         <Paragraph>@ComicPages[focusPageNum].Comment</Paragraph>
 
+                        @*The back and forward buttons*@
                         <Container>
                             <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == 0) @onclick="() => JumpToPage(focusPageNum-1)">Previous</Button>
                             <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == ComicPages.Count - 1) @onclick="() => JumpToPage(focusPageNum+1)">Next</Button>
