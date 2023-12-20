@@ -3,112 +3,53 @@
   "authors": [ "Christopher Hahn", "Ethan Stovall" ],
   "urlPrefix": "ComicPages/",
   "fileType": ".png",
+  "note": "Any changes to the below will require emptying all of your browser's cache (ctrl F5?)",
   "comicPages": [
     {
       "title": "The Quest For Jonuts",
-      "imageURLs": [ "Q4J Title Pages-2" ],
+      "imageURLs": [ "1-Q4J Title" ],
       "thumbnailIndex": 0,
       "comment": "A comic created to share with my friends in one of my work groups at Raytheon. Whenever I had some time to spare I would work on the next page to this. The original concept for this was to have a sc-fi adventure about some people looking for some \"artifact.\""
     },
     {
       "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "imageURLs": [ "2-Q4J Intro (1)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "title": "TestPage 4",
+      "imageURLs": [ "2-Q4J Intro (2)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
       "title": "TestPage 40",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "imageURLs": [ "2-Q4J Intro (3)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "title": "TestPage 40000",
+      "imageURLs": [ "2-Q4J Intro (4)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "title": "TestPage 40",
+      "imageURLs": [ "2-Q4J Intro (5)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "title": "TestPage 40",
+      "imageURLs": [ "2-Q4J Intro (6)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     },
     {
-      "title": "TestPage 20",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
-      "thumbnailIndex": 0,
-      "comment": "Blank"
-    },
-    {
-      "title": "TestPage 1",
-      "imageURLs": [ "QuestForJonuts-OriginalRun-01" ],
+      "title": "TestPage 40",
+      "imageURLs": [ "2-Q4J Intro (7)" ],
       "thumbnailIndex": 0,
       "comment": "Blank"
     }

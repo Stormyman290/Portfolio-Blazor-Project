@@ -9,6 +9,7 @@ namespace CHBlazorPortfolioTake3.Classes
         public string[] Authors { get; set; }
         public string UrlPrefix { get; set; }
         public string FileType { get; set; }
+        public string Note { get; set; }
         public List<ComicPage> ComicPages { get; set; }
 
 
