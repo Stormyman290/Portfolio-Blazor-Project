@@ -1,5 +1,5 @@
 # Portfolio Blazor Project
- A portfolio made using Microsoft Blazor
+A portfolio and comic site made using Microsoft Blazor
 
 
 ## License
