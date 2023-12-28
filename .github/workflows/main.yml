@@ -24,7 +24,7 @@ jobs:
         dotnet-version: 3.1
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish CHBlazorPortfolioTake3\CHBlazorPortfolioTake3\CHBlazorPortfolioTake3.csproj -c Release -o release --nologo
+      run: dotnet publish CHBlazorPortfolioTake3/CHBlazorPortfolioTake3/CHBlazorPortfolioTake3.csproj -c Release -o release --nologo
       # -c (--configuration) argument tells to build the project using the Release configuration.
       # -o (--output) argument specifies where to put the published files. Tells dotnet to publish the project to the release folder.
       # --nologo argument will prevent some unnecessary lines from being output to the console.
