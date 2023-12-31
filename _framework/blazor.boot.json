@@ -1,7 +1,7 @@
 {
   "entryAssembly": "CHBlazorPortfolioTake3",
   "resources": {
-    "hash": "sha256-CGzWHriawVDCzrcLvc78YZFyVMERw1OK/taC7DbRvg8=",
+    "hash": "sha256-1HuHXNi5URIIaXW+yZB+tAYtH6T5fDN+b0oxvPnPKuk=",
     "runtime": {
       "dotnet.7.0.14.mikshhdjmu.js": "sha256-YWGUknGRzP/fgO6YjvCJKPVQNZAPEd6ll+rHfQEIW+I=",
       "dotnet.timezones.blat": "sha256-t5xviiOQTfAsF0UDhmcyalKiaehUmf/sqJl97tmPM0M=",
@@ -15,7 +15,7 @@
       "Blazorise.dll": "sha256-9NaKg3w9NHkob8wLkobrmixtnr/viux5Pi0GSPjuiP8=",
       "Blazorise.Icons.FontAwesome.dll": "sha256-pqPTeCIXHN0jvRtiBbaQPNMqxImrWUiFaB5FGUbelVw=",
       "Blazorise.Licensing.dll": "sha256-HCvMfGG13thv3GWvUEN2Ca7avc0Bjw5kpc9h9Kk+LS0=",
-      "CHBlazorPortfolioTake3.dll": "sha256-kxe3qicVgtpACKb9Wrm0bqcNvh/VrdmVl+VJ1pTjkEk=",
+      "CHBlazorPortfolioTake3.dll": "sha256-O2qCIEQ01SAfxUMX8UUMdpjwA+BBEO6rPkCngHxKwg4=",
       "DeepCloner.dll": "sha256-0z32Jj39dxvhAObryD60N1OemfRoFvti9RLp8VkWXSI=",
       "Microsoft.AspNetCore.Components.dll": "sha256-t2vRhmTmeoYayilCJAhybF5iSTU/yunPjjoj8+sV03M=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-UfkV1ukGQPnsC0kELIByVOwnBSNdIxqw1LYCShk672s=",
