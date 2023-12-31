@@ -7,8 +7,8 @@
 else
 {
     <Layout>
-        <LayoutHeader Fixed>
-            <h3>@QuestForJonutsComic.ComicTitle</h3>
+        <LayoutHeader Fixed=false Background="Background.Success">
+            <h3>christopherhahn.net (Coming Soon) - @QuestForJonutsComic.ComicTitle</h3>
         </LayoutHeader>
         <Layout Sider>
             <LayoutSider>
@@ -25,11 +25,11 @@ else
                                             <Div>
                                                 @*<Image Padding="Padding.Is2" Source=@ComicPages[pageNum].ImageURLs[ComicPages[pageNum].ThumbnailIndex] Text="Image Test Text" Fluid></Image>*@
                                                 @*<Image Padding="Padding.Is2" Source="favicon.png" Text="Image Test Text" Loading></Image>*@
+                                                <Text TextColor="TextColor.White">p@(pageNum + 1) - </Text>
                                                 <Figure Padding="Padding.Is2" Size="FigureSize.Is128x128" Position="Position.Relative.Start">
                                                     <FigureImage Source=@ComicPages[pageNum].ImageURLs[ComicPages[pageNum].ThumbnailIndex] AlternateText="Image Test Text" Rounded/>
                                                 </Figure>
-                                                <Text TextColor="TextColor.White">@ComicPages[pageNum].Title</Text>
-                                                <Text TextColor="TextColor.White"> - p@(pageNum + 1)</Text>
+                                                <Text TextColor="TextColor.White"> - @ComicPages[pageNum].Title</Text>
                                             </Div>
                                         </Container>
                                     </Button>
@@ -43,26 +43,29 @@ else
                 <LayoutContent Overflow="Overflow.Auto">
 
                     <!--Content-->
-                    <Container Width="Width.Is50" Background="Background.Warning">
+                    <Container Width="Width.Is50">  @*Background="Background.Warning">*@
                         @*The comic title*@
                         <Heading Size="HeadingSize.Is3">@ComicPages[focusPageNum].Title</Heading>
 
                         @*The comic images*@
-                        <Container Background="Background.Danger">
+                        <Container> @*Background="Background.Danger">*@
                             <CardImage Source=@ComicPages[focusPageNum].ImageURLs[0] Text="Image Test Text"></CardImage>
                         </Container>
 
                         @*The comic paragraph comment*@
                         <Paragraph>@ComicPages[focusPageNum].Comment</Paragraph>
-
-                        @*The back and forward buttons*@
-                        <Container>
-                            <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == 0) @onclick="() => JumpToPage(focusPageNum-1)">Previous</Button>
-                            <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == ComicPages.Count - 1) @onclick="() => JumpToPage(focusPageNum+1)">Next</Button>
-                        </Container>
                     </Container>
 
                 </LayoutContent>
+
+                <LayoutFooter Background="Background.Warning">
+                    @*The back and forward buttons*@
+                    <Container>
+                        <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == 0) @onclick="() => JumpToPage(focusPageNum-1)">Previous</Button>
+                        <Button Background="Background.Secondary" Padding="Padding.Is2" Disabled=@(focusPageNum == ComicPages.Count - 1) @onclick="() => JumpToPage(focusPageNum+1)">Next</Button>
+                    </Container>
+                </LayoutFooter>
+
             </Layout>
         </Layout>
     </Layout>
